@@ -14,6 +14,11 @@ public class ProductService {
     }
 
     public Product create(Product product){
+
+        if (product.getQuantity() <=0){
+            throw new IllegalArgumentException("Erro: quantidade do produto errada, coloque um quantidade permitida");
+        }
+
         return productRepository.save(product);
     }
 }
