@@ -3,9 +3,9 @@ spring:
     name: desafiocomercio
 
   datasource:
-    url: ${"DATABASE_URL"}
-    username: ${"DATABASE_USERNAME"}
-    password: ${"DATABASE_PASSWORD"}
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
