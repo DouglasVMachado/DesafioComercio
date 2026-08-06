@@ -4,6 +4,8 @@ import dev.comercio.desafiocomercio.entity.Product;
 import dev.comercio.desafiocomercio.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProductService {
 
@@ -15,6 +17,10 @@ public class ProductService {
 
     public Product createProduct(Product product){
         return productRepository.save(product);
+    }
+
+    public List<Product> findAll(){
+        return productRepository.findAll();
     }
 
 
